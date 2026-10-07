@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #FFFFF0; /* Nền Trắng ngà */
+  color: #000080; /* Chữ Xanh Navy */
+}
