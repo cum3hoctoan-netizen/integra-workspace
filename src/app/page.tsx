@@ -1,6 +1,6 @@
 import React from 'react';
 // Import file JSON vừa tạo
-import studentsData from '../data/students.json';
+import studentsData from './data/students.json';
 
 export default function Home() {
   return (
