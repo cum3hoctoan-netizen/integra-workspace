@@ -1,0 +1,28 @@
+[
+  {
+    "id": "prj-001",
+    "status": "Đang thực hiện",
+    "level": "Lớp 11",
+    "topicTitle": "Chuyên đề Tổ hợp - Xác suất: Từ mô hình đếm đến vận dụng cao",
+    "studentName": "Nguyễn Văn A",
+    "cohort": "Khóa 2024-2027",
+    "startYear": 2026,
+    "expectedCompletion": "12/2026",
+    "institution": "THPT Nguyễn Thượng Hiền",
+    "tags": ["Đại số & Giải tích", "Tư duy thực chất"],
+    "diagnostic": "Tư duy logic tốt, cần rèn thêm kỹ năng chia trường hợp không bị sót."
+  },
+  {
+    "id": "prj-002",
+    "status": "Đã hoàn thành",
+    "level": "Lớp 12",
+    "topicTitle": "Ứng dụng hình học tọa độ không gian trong bài toán cực trị",
+    "studentName": "Trần Thị B",
+    "cohort": "Khóa 2023-2026",
+    "startYear": 2025,
+    "expectedCompletion": "05/2026",
+    "institution": "THPT Nguyễn Thượng Hiền",
+    "tags": ["Hình học", "Vận dụng cao"],
+    "diagnostic": "Tính toán cẩn thận, đã khắc phục được lỗi tư duy rập khuôn."
+  }
+]
