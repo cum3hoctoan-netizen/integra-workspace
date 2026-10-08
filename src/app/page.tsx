@@ -1,13 +1,17 @@
 import React from 'react';
 // Import file JSON vừa tạo
 import studentsData from './data/students.json';
+import MathBackground from '../components/MathBackground';
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-10 flex flex-col items-center">
-      {/* Khối Tiêu đề */}
-      <div className="w-full max-w-4xl border-b-2 border-integra-gold pb-4 mb-8">
-        <h1 className="text-4xl font-bold text-integra-navy uppercase tracking-widest">
+    <main className="min-h-screen p-10 flex flex-col items-center relative">
+      {/* Bầu trời công thức trôi lơ lửng ở background */}
+      <MathBackground />
+
+      {/* Cần thêm z-10 và relative để các khối này nổi lên trên */}
+      <div className="w-full max-w-4xl border-b-2 border-integra-gold pb-4 mb-8 z-10 relative">
+        <h1 className="text-4xl font-bold text-integra-navy uppercase tracking-widest drop-shadow-sm">
           Integra Workspace
         </h1>
         <p className="text-integra-gold font-semibold mt-2">
@@ -15,14 +19,14 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Khối Hồ sơ học sinh */}
-      <div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-md border border-gray-200">
+      <div className="w-full max-w-4xl bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-gray-100 z-10 relative">
         <h2 className="text-2xl font-bold text-integra-navy mb-6 border-b-2 border-gray-100 pb-2">
           Hồ sơ chuyên đề & Đánh giá năng lực
         </h2>
         
+        {/* ... (Đoạn mã thẻ details lặp danh sách học sinh thầy giữ nguyên không đổi) ... */}
+        
         <div className="flex flex-col gap-4">
-          {/* Vòng lặp duyệt qua từng học sinh trong file JSON */}
           {studentsData.map((record) => (
             <details key={record.id} className="group border border-gray-200 rounded-lg bg-white [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex items-center justify-between cursor-pointer p-4 font-medium">
@@ -38,13 +42,11 @@ export default function Home() {
                     Học sinh: <span className="font-semibold">{record.studentName}</span> | {record.cohort}
                   </div>
                 </div>
-                {/* Biểu tượng mũi tên */}
                 <span className="transition group-open:rotate-180 text-integra-gold">
                   <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                 </span>
               </summary>
               
-              {/* Nội dung chi tiết hiện ra khi mở thẻ */}
               <div className="p-4 border-t border-dashed border-gray-200 bg-integra-ivory/30">
                 <div className="grid grid-cols-[150px_1fr] gap-2 text-sm text-gray-700">
                   <div className="font-semibold text-integra-navy">Trường:</div>
@@ -68,7 +70,6 @@ export default function Home() {
             </details>
           ))}
         </div>
-
       </div>
     </main>
   );
