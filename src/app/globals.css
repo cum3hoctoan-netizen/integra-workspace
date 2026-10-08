@@ -2,15 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #FFFFF0; /* Nền Trắng ngà */
-  color: #000080; /* Chữ Xanh Navy */
-}
 @import 'katex/dist/katex.min.css';
 
+body {
+  background-color: #FFFFF0; /* Nền Trắng ngà */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hiệu ứng Background Toán học */
 @keyframes float-up {
   0% { transform: translateY(100vh) rotate(-5deg); opacity: 0; }
-  10% { opacity: 0.15; } /* Mờ ảo chỉ 15% */
+  10% { opacity: 0.15; }
   90% { opacity: 0.15; }
   100% { transform: translateY(-20vh) rotate(15deg); opacity: 0; }
 }
@@ -20,5 +23,5 @@ body {
   animation: float-up linear infinite;
   color: #000080; /* Màu Xanh Navy */
   z-index: 0;
-  pointer-events: none; /* Tránh cản trở học sinh click chuột */
+  pointer-events: none;
 }
