@@ -1,7 +1,7 @@
 import React from 'react';
 // Import file JSON vừa tạo
 import studentsData from './data/students.json';
-import MathBackground from '../components/MathBackground';
+import MathBackground from './components/MathBackground';
 
 export default function Home() {
   return (
